@@ -1,0 +1,76 @@
+
+  <title>EL LINK CON ANUNCIOS - Juegos</title>
+</head>
+<body>
+
+  <h1>EL LINK CON ANUNCIOS - Juegos sin anuncios</h1>
+  <p>Descargas directas para quienes apoyan el proyecto.</p>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<style>
+  body {
+    background: #111;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  a {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 10px 15px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  a:hover {
+    background: #2980b9;
+  }
+  #premium1, #premium2 {
+    background: #e67e22;
+  }
+  #premium1:hover, #premium2:hover {
+    background: #d35400;
+  }
+</style>
+
+  <meta charset="UTF-8">
+  <title>EL LINK CON ANUNCIOS - Juegos</title>
+</head>
+<body>
+<h2>Juego 1</h2>
+<p>Descripción del juego 1.</p>
+
+<!-- Botón normal -->
+<a href="https://www.mediafire.com/file/5bb3kvgi7gftcfi/My+Summer+with+Onee-chans+(Ver1.1)+ES.zip/file">Descargar normal</a>
+
+<!-- Botón premium -->
+<a href="#" id="premium1">Descargar sin anuncios (Premium)</a>
+
+<hr>
+
+<h2>Juego 2</h2>
+<p>Descripción del juego 2.</p>
+
+<!-- Botón normal -->
+<a href="https://www.mediafire.com/file/v14gvhbqog56vjj/My_Summer_with_Onee-chans.apk/file">Descargar normal</a>
+
+<!-- Botón premium -->
+<a href="#" id="premium2">Descargar sin anuncios (Premium)</a>
+
+
+</html>
+<script>
+  document.getElementById("premium1").onclick = function(e) {
+    e.preventDefault();
+    alert("Esta descarga será solo para suscriptores de Patreon.");
+  };
+
+  document.getElementById("premium2").onclick = function(e) {
+    e.preventDefault();
+    alert("Esta descarga será solo para suscriptores de Patreon.");
+  };
+</script>
