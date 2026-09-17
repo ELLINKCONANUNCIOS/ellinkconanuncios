@@ -1,76 +1,98 @@
-
-  <title>EL LINK CON ANUNCIOS - Juegos</title>
-</head>
-<body>
-
-  <h1>EL LINK CON ANUNCIOS - Juegos sin anuncios</h1>
-  <p>Descargas directas para quienes apoyan el proyecto.</p>
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<meta charset="UTF-8">
+<title>Catálogo de Juegos</title>
+
 <style>
+  /* ======= COLORES BASE ======= */
+  :root {
+    --fondo: #111;
+    --tarjeta: #1e1e1e;
+    --tarjeta-hover: #2a2a2a;
+    --texto: #fff;
+    --azul: #3498db;
+    --naranja: #e67e22;
+  }
+
+  /* ======= ESTILO GENERAL ======= */
   body {
-    background: #111;
-    color: #eee;
+    background: var(--fondo);
+    color: var(--texto);
     font-family: Arial, sans-serif;
+    margin: 0;
     padding: 20px;
   }
-  a {
-    display: inline-block;
-    margin: 5px 0;
-    padding: 10px 15px;
-    background: #3498db;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
   }
-  a:hover {
-    background: #2980b9;
+
+  /* ======= CATÁLOGO (3 POR FILA) ======= */
+  .catalogo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
-  #premium1, #premium2 {
-    background: #e67e22;
+
+  /* ======= TARJETAS DE JUEGO ======= */
+  .juego-card {
+    background: var(--tarjeta);
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
   }
-  #premium1:hover, #premium2:hover {
-    background: #d35400;
+
+  .juego-card:hover {
+    background: var(--tarjeta-hover);
+    transform: scale(1.03);
+  }
+
+  /* ======= IMAGEN PEQUEÑA ======= */
+  .juego-card img {
+    width: 100%;
+    height: 110px;   /* ← MÁS PEQUEÑA */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  h3, p {
+    margin: 10px 0;
   }
 </style>
 
-  <meta charset="UTF-8">
-  <title>EL LINK CON ANUNCIOS - Juegos</title>
 </head>
 <body>
-<h2>Juego 1</h2>
-<p>Descripción del juego 1.</p>
 
-<!-- Botón normal -->
-<a href="https://www.mediafire.com/file/5bb3kvgi7gftcfi/My+Summer+with+Onee-chans+(Ver1.1)+ES.zip/file">Descargar normal</a>
+<h1>Catálogo de Juegos</h1>
 
-<!-- Botón premium -->
-<a href="#" id="premium1">Descargar sin anuncios (Premium)</a>
+<div class="catalogo">
 
-<hr>
+  <!-- JUEGO 1 -->
+  <div class="juego-card" onclick="location.href='juego1.html'">
+    <img src="imagenes/juego1.jpg" alt="Juego 1">
+    <h3>Juego 1</h3>
+    <p>Acción / Aventura</p>
+  </div>
 
-<h2>Juego 2</h2>
-<p>Descripción del juego 2.</p>
+  <!-- JUEGO 2 -->
+  <div class="juego-card" onclick="location.href='juego2.html'">
+    <img src="imagenes/juego2.jpg" alt="Juego 2">
+    <h3>Juego 2</h3>
+    <p>Terror / Supervivencia</p>
+  </div>
 
-<!-- Botón normal -->
-<a href="https://www.mediafire.com/file/v14gvhbqog56vjj/My_Summer_with_Onee-chans.apk/file">Descargar normal</a>
+  <!-- JUEGO 3 -->
+  <div class="juego-card" onclick="location.href='juego3.html'">
+    <img src="imagenes/juego3.jpg" alt="Juego 3">
+    <h3>Juego 3</h3>
+    <p>Plataformas</p>
+  </div>
 
-<!-- Botón premium -->
-<a href="#" id="premium2">Descargar sin anuncios (Premium)</a>
+</div>
 
-
+</body>
 </html>
-<script>
-  document.getElementById("premium1").onclick = function(e) {
-    e.preventDefault();
-    alert("Esta descarga será solo para suscriptores de Patreon.");
-  };
-
-  document.getElementById("premium2").onclick = function(e) {
-    e.preventDefault();
-    alert("Esta descarga será solo para suscriptores de Patreon.");
-  };
-</script>
