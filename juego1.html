@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Juego 1</title>
+
+<style>
+  :root {
+    --fondo: #111;
+    --texto: #fff;
+    --azul: #3498db;
+    --naranja: #e67e22;
+    --tarjeta: #1e1e1e;
+  }
+
+  body {
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center; /* ← TODO CENTRADO */
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  /* Imagen centrada y pequeña */
+  .juego-img {
+    width: 100%;          /* ← Más pequeña */
+    max-width: 500px;    /* ← Tamaño máximo */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  /* Botones */
+  .btn-normal {
+    display: inline-block;
+    padding: 10px 15px;
+    background: var(--azul);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+  }
+
+  .btn-premium {
+    display: inline-block;
+    padding: 10px 15px;
+    background: var(--naranja);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+  }
+
+  /* Caja de cambios centrada */
+  .cambios {
+    background: var(--tarjeta);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 80%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto; /* ← Centrado */
+    text-align: left;   /* ← Texto alineado bonito */
+  }
+</style>
+
+</head>
+<body>
+
+<h2>Juego 1</h2>
+
+<img src="imagenes/juego1.jpg" class="juego-img">
+
+<p>
+  Aquí puedes escribir la descripción del juego 1: historia, características,
+  tamaño, requisitos, modos de juego, etc.
+</p>
+
+<a href="https://mediafire.com/TU_ENLACE" class="btn-normal">Descargar normal</a>
+<a href="#" class="btn-premium">Descargar sin anuncios (Premium)</a>
+
+<div class="cambios">
+  <h3>Cambios</h3>
+  <p>- Versión 1.0 subida</p>
+  <p>- Corrección de bugs</p>
+  <p>- Optimización de rendimiento</p>
+</div>
+
+</body>
+</html>
